@@ -828,6 +828,37 @@ header.scrolled {
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* ===== SCROLL ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+.accommodation__card,
+.feature__item,
+.gallery__item,
+.info__item {
+  will-change: transform;
+}
+
+/* ===== IMPROVED HOVER STATES ===== */
+.header__menu li a,
+.footer__section a {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* ===== RESPONSIVE ===== */
 @media screen and (max-width: 968px) {
   .header__nav {
